@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Real-Time Donation System
 
-## Getting Started
+This project involves a real-time donation system utilizing three protocols: TCP, UDP, and WebSocket. Below are the steps to run the application, depending on which protocol you want to use.
 
-First, run the development server:
+## WebSocket
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+WebSocket is implemented separately from TCP and UDP. To run the WebSocket server and the Next.js frontend, follow these steps:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. **Switch to the `master` branch** to use the WebSocket functionality.
+2. **Download the WebSocket files** from the `master` branch.
+3. **For the backend**: Download the backend code from the `main` branch and combine the files into the same directory.
+4. **Install dependencies for the frontend**: 
+   First, you need to install Next.js in the frontend directory. Open a terminal in your project folder and run:
+   
+   ```bash
+   npm install next
+5. **Run the WebSocket server**:
+   Open two terminals:
+   
+   - **Terminal 1**: Run the Go backend server:
+     ```bash
+     go run main.go
+     ```
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+   - **Terminal 2**: Start the Next.js frontend:
+     ```bash
+     npm run dev
+     ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+6. **Access the application**: Open [http://localhost:3000](http://localhost:3000) in your browser to see the real-time donation system in action.
 
-## Learn More
+## TCP and UDP
 
-To learn more about Next.js, take a look at the following resources:
+For the TCP and UDP functionality, follow the steps below:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. **Switch to the `tcp-&-udp` branch** for the TCP and UDP features.
+2. **Download the TCP and UDP files** from the `tcp-&-udp` branch.
+3. **Run the application in three terminals**:
+   
+   - **Terminal 1**: Run the Go server (`server.go`):
+     ```bash
+     go run server.go
+     ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+   - **Terminal 2**: Run the Go client (`client.go`):
+     ```bash
+     go run client.go
+     ```
 
-## Deploy on Vercel
+   - **Terminal 3**: Run the Go top-up functionality (`topup.go`):
+     ```bash
+     go run topup.go
+     ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This will allow you to interact with the system using TCP for registration and login, UDP for top-up functionality, and a simple terminal interface for managing donations.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Additional Information
+
+### Learn More
+
+- [Next.js Documentation](https://nextjs.org/docs) - Learn more about Next.js features and APIs.
+- [Learn Next.js](https://nextjs.org/learn) - Interactive tutorial for Next.js.
+- [Vercel Deployment Documentation](https://nextjs.org/docs/app/building-your-application/deploying) - How to deploy your Next.js app on Vercel.
+
+### Deploy on Vercel
+
+The easiest way to deploy your Next.js app is through the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme).
+
+### Video Tutorial
+
+For a detailed walkthrough on setting up and running the donation system, watch the video on YouTube:
+
+[Watch the video here](https://www.youtube.com)
