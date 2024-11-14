@@ -70,4 +70,4 @@ The easiest way to deploy your Next.js app is through the [Vercel Platform](http
 
 For a detailed walkthrough on setting up and running the donation system, watch the video on YouTube:
 
-[Watch the video here]([https://www.youtube.com](https://youtu.be/JEMGIW0JDzo))
+[Watch the video here](https://youtu.be/JEMGIW0JDzo)
